@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Posts</title>
+</head>
+<body>
+	<h3>Edit Posts</h3>
+	<form method="post" action="/update">
+		<input type="hidden" name="_method" value="put">
+		<label>Change Title</label>
+			<textarea type="text" name="content"></textarea>
+		<label>Change Body</label>
+			<textarea type="text" name="content"></textarea>
+		<button type="submit">Submit</button>
+	</form>
+
+	<% if !@post.empty? %>
+	<% @post.each do |post| %>
+		<div class="post">
+			<h2><%= post.content %></h2>
+			<br>
+			<p> <%= post.body %> </p>
+		</div>
+	<% end %>
+<% else %>
+	<p> NO POSTS YET </p>
+<% end %>
+</body>
+</html>

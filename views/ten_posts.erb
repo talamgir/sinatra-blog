@@ -1,0 +1,20 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>Top Ten Posts</title>
+</head>
+<body>
+ <h1> Feed </h1>
+<% if !@post.empty? %>
+	<% @allpost.each do |post| %>
+		<div class="post">
+			<h2> Title: <%= post.content %> </h2>
+			<br>
+			<p> <%= post.body %> </p>
+		</div>
+	<% end %>
+<% else %>
+	<p> There are no posts, yet :( </p>
+<% end %>
+</body>
+</html>
