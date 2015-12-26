@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Feed</title>
@@ -8,7 +8,7 @@
 	<% if !@post.empty? %>
 	<% @post.each do |post| %>
 		<div class="post">
-			<h2> Title: <%= post.content %> </h2>
+			<h2><%= post.content %></h2>
 			<br>
 			<p> <%= post.body %> </p>
 		</div>
